@@ -9,7 +9,7 @@ const ContentNhom = ({ user }) => {
     if (!image) return "/img/default-trekking.jpg";
 
     // Nếu là link full
-    if (image.startsWith("http")) return image;
+    if (image.startsWith("https")) return image;
 
     // Nếu là path từ server
     const cleanPath = image.startsWith("/") ? image.slice(1) : image;
