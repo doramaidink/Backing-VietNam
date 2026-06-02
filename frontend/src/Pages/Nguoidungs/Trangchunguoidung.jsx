@@ -31,7 +31,7 @@ const Trangchunguoidung = () => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          `http://backing-vietnam-bpko.onrender.com/homeuser/${encodeURIComponent(hoten)}`
+          `https://backing-vietnam-bpko.onrender.com/homeuser/${encodeURIComponent(hoten)}`
         );
 
         const result = await res.json();

@@ -142,7 +142,7 @@ const ContentDangki = () => {
         return;
       }
 
-      const registerRes = await fetch("http://backing-vietnam-bpko.onrender.com/login/dangky", {
+      const registerRes = await fetch("https://backing-vietnam-bpko.onrender.com/login/dangky", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

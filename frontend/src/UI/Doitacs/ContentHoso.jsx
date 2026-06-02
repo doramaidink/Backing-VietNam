@@ -90,7 +90,7 @@ const ContentHoso = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://backing-vietnam-bpko.onrender.com/doitac/${slug}/hoso`);
+        const res = await fetch(`https://backing-vietnam-bpko.onrender.com/doitac/${slug}/hoso`);
         const result = await res.json();
 
         if (res.ok && result.doiTac) {
@@ -183,7 +183,7 @@ const ContentHoso = () => {
         soCCCD: cccdRef.current?.value || "",
       };
 
-      const res = await fetch(`http://backing-vietnam-bpko.onrender.com/doitac/${slug}/hoso`, {
+      const res = await fetch(`https://backing-vietnam-bpko.onrender.com/doitac/${slug}/hoso`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

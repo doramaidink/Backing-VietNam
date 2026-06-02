@@ -16,7 +16,7 @@ import {
 import { useParams } from 'react-router-dom';
 
 
-const API_URL = 'http://backing-vietnam-bpko.onrender.com';
+const API_URL = 'https://backing-vietnam-bpko.onrender.com';
 
 const ContentDuyetDiaDiem = () => {
   const { slug } = useParams();

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Eye, X } from "lucide-react";
 import SidebarTaikhoan from "./SidebarTaikhoan";
 
-const API = "http://backing-vietnam-bpko.onrender.com";
+const API = "https://backing-vietnam-bpko.onrender.com";
 
 const ContentHoadon = ({ user }) => {
   const [hoaDons, setHoaDons] = useState([]);

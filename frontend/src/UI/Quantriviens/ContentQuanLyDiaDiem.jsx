@@ -20,7 +20,7 @@ import {
 import { useParams } from 'react-router-dom';
 
 
-const API_URL = 'http://backing-vietnam-bpko.onrender.com';
+const API_URL = 'https://backing-vietnam-bpko.onrender.com';
 
 // ─── Danh sách tỉnh/thành Việt Nam ────────────────────────────────────────────
 const TINH_THANH_VN = [

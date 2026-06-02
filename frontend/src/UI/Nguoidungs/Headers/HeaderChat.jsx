@@ -16,7 +16,7 @@ const HeaderChat = ({ user }) => {
     if (!image) return "";
     if (image.startsWith("http")) return image;
     if (image.startsWith("/uploads") || image.startsWith("/img")) {
-      return `http://backing-vietnam-bpko.onrender.com${image}`;
+      return `https://backing-vietnam-bpko.onrender.com${image}`;
     }
     if (image.startsWith("/")) return image;
     return `http://backing-vietnam-bpko.onrender.com/${image}`;

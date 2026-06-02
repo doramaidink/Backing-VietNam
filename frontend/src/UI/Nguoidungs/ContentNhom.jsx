@@ -47,7 +47,7 @@ const ContentNhom = ({ user }) => {
       if (!user) return;
       try {
         // Gọi API lấy nhóm theo ID người dùng
-        const res = await axios.get(`http://backing-vietnam-bpko.onrender.com/nhom/user/${user.id || user._id}`);
+        const res = await axios.get(`https://backing-vietnam-bpko.onrender.com/nhom/user/${user.id || user._id}`);
         setMyGroups(res.data.nhoms);
       } catch (error) {
         console.error("Lỗi lấy danh sách nhóm của tôi:", error);

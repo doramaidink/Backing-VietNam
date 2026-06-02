@@ -17,7 +17,7 @@ const ContentThongBaoHeThong = () => {
 
   const handleSubmit = async () => {
     try {
-      const res = await fetch("http://backing-vietnam-bpko.onrender.com/thongbao", {
+      const res = await fetch("https://backing-vietnam-bpko.onrender.com/thongbao", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

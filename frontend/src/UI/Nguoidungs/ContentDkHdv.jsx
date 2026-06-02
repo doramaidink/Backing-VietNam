@@ -415,7 +415,7 @@ const ContentDkHdv = () => {
   useEffect(() => {
     const fetchDiaDiem = async () => {
       try {
-        const res = await fetch("http://backing-vietnam-bpko.onrender.com/diadiem");
+        const res = await fetch("https://backing-vietnam-bpko.onrender.com/diadiem");
         const data = await res.json();
 
         if (res.ok && Array.isArray(data)) {
@@ -790,7 +790,7 @@ const ContentDkHdv = () => {
       payload.append("anhKhuonMat", files.anhKhuonMat);
       payload.append("lyLichTuPhap", files.lyLichTuPhap);
 
-      const response = await fetch("http://backing-vietnam-bpko.onrender.com/doitac/dang-ky-huong-dan-vien", {
+      const response = await fetch("https://backing-vietnam-bpko.onrender.com/doitac/dang-ky-huong-dan-vien", {
         method: "POST",
         body: payload,
       });

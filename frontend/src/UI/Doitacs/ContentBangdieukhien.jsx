@@ -16,7 +16,7 @@ const ContentBangdieukhien = () => {
         if (!doiTacId) return;
 
         const res = await fetch(
-          `http://backing-vietnam-bpko.onrender.com/loimoi?doiTacId=${doiTacId}`
+          `https://backing-vietnam-bpko.onrender.com/loimoi?doiTacId=${doiTacId}`
         );
 
         const data = await res.json();
@@ -56,7 +56,7 @@ const ContentBangdieukhien = () => {
           return;
         }
 
-        const res = await fetch(`http://backing-vietnam-bpko.onrender.com/doitac/${userId}/dashboard`);
+        const res = await fetch(`https://backing-vietnam-bpko.onrender.com/doitac/${userId}/dashboard`);
         const result = await res.json();
 
         console.log("DASHBOARD DATA:", result);

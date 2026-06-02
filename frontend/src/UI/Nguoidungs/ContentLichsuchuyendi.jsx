@@ -29,7 +29,7 @@ const ContentLichsuchuyendi = ({ user }) => {
       return;
     }
 
-    fetch(`http://backing-vietnam-bpko.onrender.com/nhom/lichsu/${userId}`)
+    fetch(`https://backing-vietnam-bpko.onrender.com/nhom/lichsu/${userId}`)
       .then(res => res.json())
       .then(res => {
         console.log("LICH SU:", res);
@@ -50,7 +50,7 @@ const ContentLichsuchuyendi = ({ user }) => {
           window.location.href = "/login";
         }}
         getImageSrc={(img) =>
-          img ? `http://backing-vietnam-bpko.onrender.com/${img}` : "/img/default.jpg"
+          img ? `https://backing-vietnam-bpko.onrender.com/${img}` : "/img/default.jpg"
         }
       />
 

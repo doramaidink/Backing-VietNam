@@ -30,7 +30,7 @@ const ContentChonNhom = () => {
         const selectedPlaceId = selectedGuide?.diaDiemDuocChon?._id;
 
         // 2. Gọi API lấy toàn bộ nhóm của User
-        const res = await axios.get(`http://backing-vietnam-bpko.onrender.com/nhom/user/${userId}`);
+        const res = await axios.get(`https://backing-vietnam-bpko.onrender.com/nhom/user/${userId}`);
 
         // 3. LỌC: Chỉ giữ lại các nhóm thuộc địa điểm này
         const filteredGroups = res.data.nhoms.filter(group => {

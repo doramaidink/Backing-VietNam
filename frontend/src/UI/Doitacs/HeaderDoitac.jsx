@@ -20,7 +20,7 @@ const HeaderDoitac = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
   useEffect(() => {
-    fetch("http://backing-vietnam-bpko.onrender.com/thongbao?type=doitac")
+    fetch("https://backing-vietnam-bpko.onrender.com/thongbao?type=doitac")
       .then(res => res.json())
       .then(data => {
         console.log("DOITAC NOTI:", data);

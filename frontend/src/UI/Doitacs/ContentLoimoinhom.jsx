@@ -285,7 +285,7 @@ const ContentLoimoinhom = () => {
                     <img
                       src={
                         item.doiTacId?.image
-                          ? `http://backing-vietnam-bpko.onrender.com/${item.doiTacId.image}`
+                          ? `https://backing-vietnam-bpko.onrender.com/${item.doiTacId.image}`
                           : "/img/default.jpg"
                       }
                       alt="avatar"
