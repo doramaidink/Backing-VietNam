@@ -2,7 +2,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 const express = require('express');
-const http = require('https');
+const http = require('http');
 const { Server } = require("socket.io");
 
 const port = process.env.PORT || 5000;
@@ -131,7 +131,7 @@ io.on("connection", (socket) => {
 
 // --- KẾT NỐI DB VÀ CHẠY SERVER ---
 db.connectDB().then(() => {
-  server.listen(port, () => {
-    console.log(`✅ Server đang chạy tại: http://localhost:${port}`);
+  server.listen(port, "0.0.0.0", () => {
+    console.log(`✅ Server đang chạy tại cổng ${port}`);
   });
 });
