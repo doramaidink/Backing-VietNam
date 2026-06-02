@@ -1,0 +1,30 @@
+const express = require("express");
+const router = express.Router();
+const nhomController = require("../controllers/nhomController");
+
+router.post("/roi-nhom/:id", nhomController.roiNhom);
+//  Để lấy danh sách nhóm của một người dùng
+router.get("/user/:userId", nhomController.layNhomCuaToi);
+
+router.get("/cuatoi/:userId", nhomController.layNhomCuaToi);
+
+// Thêm route lấy chi tiết nhóm
+router.get("/detail/:id", nhomController.layChiTietNhom);
+
+router.post("/join/:id", nhomController.thamGiaNhom);
+
+router.post("/checkin", nhomController.checkin);
+router.post("/checkout", nhomController.checkout);
+router.get("/lichsu/:userId", nhomController.getLichSu);
+
+router.get("/checkin-admin", nhomController.getCheckinAdmin); 
+
+router.get("/:diaDiemId", nhomController.layNhomTheoDiaDiem);
+
+
+
+router.post("/", nhomController.taoNhom);
+
+
+
+module.exports = router;
