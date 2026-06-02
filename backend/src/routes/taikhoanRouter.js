@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const taiKhoanController = require("../controllers/taiKhoanController");
+const taiKhoanController = require("../controllers/taikhoanController");
 const uploadAvatar = require("../middlewares/uploadAvatar");
 
 router.get("/:id", taiKhoanController.layThongTinTaiKhoan);
