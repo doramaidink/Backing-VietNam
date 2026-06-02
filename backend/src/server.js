@@ -5,7 +5,7 @@ const express = require('express');
 const http = require('https');
 const { Server } = require("socket.io");
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 const db = require('./config/db');
 const route = require('./routes');
@@ -42,8 +42,12 @@ route(app);
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://localhost:5173",
-    methods: ["GET", "POST"]
+    origin: [
+      "http://localhost:5173",
+      "https://backing-viet-nam.vercel.app"
+    ],
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 
@@ -128,6 +132,6 @@ io.on("connection", (socket) => {
 // --- KẾT NỐI DB VÀ CHẠY SERVER ---
 db.connectDB().then(() => {
   server.listen(port, () => {
-    console.log(`✅ Server đang chạy tại: https://localhost:${port}`);
+    console.log(`✅ Server đang chạy tại: http://localhost:${port}`);
   });
 });
