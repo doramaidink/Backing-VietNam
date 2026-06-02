@@ -48,7 +48,7 @@ const ContentBaocao = ({ user }) => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/homeuser/${encodeURIComponent(hoTen)}/baocao`
+        `https://backing-vietnam-bpko.onrender.com/homeuser/${encodeURIComponent(hoTen)}/baocao`
       );
 
       const data = await res.json();
@@ -91,7 +91,7 @@ const ContentBaocao = ({ user }) => {
       }
 
       const res = await fetch(
-        `http://localhost:5000/homeuser/${encodeURIComponent(hoTen)}/baocao`,
+        `https://backing-vietnam-bpko.onrender.com/homeuser/${encodeURIComponent(hoTen)}/baocao`,
         {
           method: "POST",
           body: formData,

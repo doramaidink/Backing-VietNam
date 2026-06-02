@@ -102,7 +102,7 @@ const ContentHuongdanvien = ({ user = null }) => {
     const rawImage = place?.diaDiem?.image || "";
     const fullImage = rawImage.startsWith("http")
       ? rawImage
-      : `http://localhost:5000/${rawImage.startsWith('/') ? rawImage.slice(1) : rawImage}`;
+      : `https://backing-vietnam-bpko.onrender.com/${rawImage.startsWith('/') ? rawImage.slice(1) : rawImage}`;
 
     const selectedGuideForPayment = {
       ...guide,

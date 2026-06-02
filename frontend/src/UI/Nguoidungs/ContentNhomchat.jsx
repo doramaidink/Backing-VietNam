@@ -46,7 +46,7 @@ const ContentNhomchat = ({ user }) => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:5000");
+    socketRef.current = io("https://backing-vietnam-bpko.onrender.com");
 
     return () => {
       socketRef.current.disconnect();
@@ -130,7 +130,7 @@ const ContentNhomchat = ({ user }) => {
 
       try {
         const res = await axios.post(
-          "http://localhost:5000/nhom/checkin",
+          "https://backing-vietnam-bpko.onrender.com/nhom/checkin",
           payload
         );
         // HIỂN THỊ MÃ AUTO
@@ -171,7 +171,7 @@ const ContentNhomchat = ({ user }) => {
 
     navigator.geolocation.getCurrentPosition(async (pos) => {
       try {
-        await axios.post("http://localhost:5000/nhom/checkout", {
+        await axios.post("https://backing-vietnam-bpko.onrender.com/nhom/checkout", {
           nhomId: groupId,
           userId: user._id || user.id,
           role: user.vaiTro === "doiTac" ? "hdv" : "user",
@@ -224,7 +224,7 @@ const ContentNhomchat = ({ user }) => {
   const initPage = async () => {
     try {
       console.log("Đang tải dữ liệu cho nhóm ID:", groupId); // Kiểm tra log này ở Console
-      const res = await axios.get(`http://localhost:5000/nhom/detail/${groupId}`);
+      const res = await axios.get(`https://backing-vietnam-bpko.onrender.com/nhom/detail/${groupId}`);
 
       if (res.data.nhom) {
         const record = res.data.checkinRecord;
@@ -387,7 +387,7 @@ const ContentNhomchat = ({ user }) => {
     try {
 
       await axios.post(
-        `http://localhost:5000/nhom/roi-nhom/${groupId}`,
+        `https://backing-vietnam-bpko.onrender.com/nhom/roi-nhom/${groupId}`,
         {
           userId: user._id || user.id
         }
@@ -734,7 +734,7 @@ const ContentNhomchat = ({ user }) => {
             <div className="member-item">
               <div className="member-avatar-wrapper">
                 <img
-                  src={groupData.nguoiTao?.id?.image ? `http://localhost:5000${groupData.nguoiTao.id.image}` : "/img/default-user.jpg"}
+                  src={groupData.nguoiTao?.id?.image ? `https://backing-vietnam-bpko.onrender.com${groupData.nguoiTao.id.image}` : "/img/default-user.jpg"}
                   alt="Leader"
                 />
                 <div className="online-status"></div>
@@ -761,7 +761,7 @@ const ContentNhomchat = ({ user }) => {
                     <img
                       src={
                         image
-                          ? `http://localhost:5000${image}`
+                          ? `https://backing-vietnam-bpko.onrender.com${image}`
                           : "/img/default-user.jpg"
                       }
                       alt={name}

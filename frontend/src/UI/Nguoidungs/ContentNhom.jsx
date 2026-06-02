@@ -14,7 +14,7 @@ const ContentNhom = ({ user }) => {
     // Nếu là path từ server
     const cleanPath = image.startsWith("/") ? image.slice(1) : image;
 
-    return `http://localhost:5173/${cleanPath}`;
+    return `https://backing-vietnam-bpko.onrender.com/${cleanPath}`;
   };
 
   const [myGroups, setMyGroups] = useState([]);

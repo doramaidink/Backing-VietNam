@@ -69,7 +69,7 @@ const ContentDangki = () => {
               );
 
               const actionCodeSettings = {
-                url: `http://localhost:5173/xac-nhan-email`,
+                url: `https://backing-vietnam-bpko.onrender.com/xac-nhan-email`,
                 handleCodeInApp: true,
               };
 
@@ -186,7 +186,7 @@ const ContentDangki = () => {
       }
 
       const actionCodeSettings = {
-        url: `http://localhost:5173/xac-nhan-email?email=${encodeURIComponent(user.email || "")}`,
+        url: `https://backing-vietnam-bpko.onrender.com/xac-nhan-email?email=${encodeURIComponent(user.email || "")}`,
         handleCodeInApp: false,
       };
 
