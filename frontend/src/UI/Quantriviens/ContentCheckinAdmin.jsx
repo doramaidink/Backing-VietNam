@@ -25,7 +25,7 @@ const ContentCheckinAdmin = ({ onSelect }) => {
     const [selected, setSelected] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/nhom/checkin-admin")
+        fetch("http://backing-vietnam-bpko.onrender.com/nhom/checkin-admin")
             .then(res => res.json())
             .then(res => {
                 console.log("ADMIN DATA:", res);

@@ -24,7 +24,7 @@ const ContentDangnhap = () => {
           onSubmit: async function (data) {
             // Call API
             try {
-              const response = await fetch("http://localhost:5000/login/dangnhap", {
+              const response = await fetch("http://backing-vietnam-bpko.onrender.com/login/dangnhap", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data)

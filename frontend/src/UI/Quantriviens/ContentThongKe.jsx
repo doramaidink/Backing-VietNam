@@ -41,7 +41,7 @@ const ContentThongKe = ({ slug }) => {
     const fetchThongKe = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://localhost:5000/quantrivien/${slug}/thongke`);
+        const res = await fetch(`http://backing-vietnam-bpko.onrender.com/quantrivien/${slug}/thongke`);
         const result = await res.json();
 
         if (!res.ok) {

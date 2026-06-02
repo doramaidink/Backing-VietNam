@@ -17,7 +17,7 @@ const ContentDatLaiMatKhau = () => {
     const checkToken = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/login/kiem-tra-reset-token?token=${token}`
+          `http://backing-vietnam-bpko.onrender.com/login/kiem-tra-reset-token?token=${token}`
         );
         const result = await response.json();
 
@@ -57,7 +57,7 @@ const ContentDatLaiMatKhau = () => {
 
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/login/dat-lai-mat-khau", {
+      const response = await fetch("http://backing-vietnam-bpko.onrender.com/login/dat-lai-mat-khau", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

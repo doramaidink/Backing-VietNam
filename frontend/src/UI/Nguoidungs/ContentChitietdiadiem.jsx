@@ -10,7 +10,7 @@ const ContentChitietdiadiem = () => {
     JSON.parse(localStorage.getItem("user")) || null;
   const { slug } = useParams();
 
-  const socket = io.connect("http://localhost:5000");
+  const socket = io.connect("http://backing-vietnam-bpko.onrender.com");
 
   const navigate = useNavigate();
 
@@ -104,7 +104,7 @@ const ContentChitietdiadiem = () => {
   useEffect(() => {
     const fetchGroups = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/nhom/${diaDiem._id}`);
+        const res = await axios.get(`http://backing-vietnam-bpko.onrender.com/nhom/${diaDiem._id}`);
         setGroups(res.data.nhoms);
       } catch (err) {
         console.error(err);
@@ -117,7 +117,7 @@ const ContentChitietdiadiem = () => {
   useEffect(() => {
     const getDanhGiaMoiNhat = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/danhgia/diadiem/${slug}?limit=2`);
+        const res = await axios.get(`http://backing-vietnam-bpko.onrender.com/danhgia/diadiem/${slug}?limit=2`);
         setReviewData({
           thongKe: res.data.thongKe || { tongDanhGia: 0, diemTrungBinh: 0 },
           danhGias: res.data.danhGias || [],
@@ -138,7 +138,7 @@ const ContentChitietdiadiem = () => {
 
     try {
       // 1. Gọi API lưu vào DB
-      const res = await axios.post(`http://localhost:5000/nhom/join/${selectedGroup._id}`, {
+      const res = await axios.post(`http://backing-vietnam-bpko.onrender.com/nhom/join/${selectedGroup._id}`, {
         userId: user.id || user._id // Đảm bảo lấy đúng ID người dùng
       });
 
@@ -195,7 +195,7 @@ const ContentChitietdiadiem = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/nhom", {
+      const res = await axios.post("http://backing-vietnam-bpko.onrender.com/nhom", {
         ...groupForm,
         diaDiemId: diaDiem._id,
         nguoiTao: {
@@ -255,7 +255,7 @@ const ContentChitietdiadiem = () => {
   useEffect(() => {
     const getChiTietDiaDiem = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/chitietdiadiem/${slug}`);
+        const res = await axios.get(`http://backing-vietnam-bpko.onrender.com/chitietdiadiem/${slug}`);
         setDiaDiem(res.data.diaDiems);
       } catch (error) {
         console.error("Lỗi lấy chi tiết địa điểm:", error);
@@ -277,7 +277,7 @@ const ContentChitietdiadiem = () => {
   const fetchGuides = async () => {
     try {
       setLoadingGuides(true);
-      const res = await axios.get("http://localhost:5000/huongdanvien");
+      const res = await axios.get("http://backing-vietnam-bpko.onrender.com/huongdanvien");
       setAllGuides(res.data.huongdanviens || []);
       setShowGuideModal(true);
     } catch (error) {
@@ -326,7 +326,7 @@ const ContentChitietdiadiem = () => {
 
     const rawImage = diaDiem?.image || "";
     const cleanPath = rawImage.startsWith('/') ? rawImage.slice(1) : rawImage;
-    const fullImage = `http://localhost:5000/${cleanPath}`;
+    const fullImage = `http://backing-vietnam-bpko.onrender.com/${cleanPath}`;
 
     const guideForPayment = {
       ...guide,
@@ -355,10 +355,10 @@ const ContentChitietdiadiem = () => {
     if (image.startsWith("http")) return image;
 
     if (image.startsWith("/uploads") || image.startsWith("/img")) {
-      return `http://localhost:5000${image}`;
+      return `http://backing-vietnam-bpko.onrender.com${image}`;
     }
 
-    return `http://localhost:5000/${image}`;
+    return `http://backing-vietnam-bpko.onrender.com/${image}`;
   };
 
   if (loading) {

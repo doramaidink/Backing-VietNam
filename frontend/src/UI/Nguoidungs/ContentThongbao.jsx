@@ -14,7 +14,7 @@ const ContentThongbao = ({ user }) => {
     const userLocal = JSON.parse(localStorage.getItem("user"));
 
     fetch(
-      `http://localhost:5000/thongbao?userId=${userLocal.id}`
+      `http://backing-vietnam-bpko.onrender.com/thongbao?userId=${userLocal.id}`
     )
       .then(res => res.json())
       .then(data => {
@@ -37,7 +37,7 @@ const ContentThongbao = ({ user }) => {
           window.location.href = "/login";
         }}
         getImageSrc={(img) =>
-          img ? `http://localhost:5000/${img}` : "/img/default.jpg"
+          img ? `http://backing-vietnam-bpko.onrender.com/${img}` : "/img/default.jpg"
         }
       />
 

@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
 
-const API = "http://localhost:5000";
+const API = "http://backing-vietnam-bpko.onrender.com";
 
 const ContentDanhgia = ({ user = null, canReview = false }) => {
   const { slug } = useParams();

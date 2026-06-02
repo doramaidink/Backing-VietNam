@@ -24,7 +24,7 @@ const ContentBaocao = ({ user }) => {
   const getImageUrl = (image) => {
     if (!image) return "";
     if (image.startsWith("http")) return image;
-    return `http://localhost:5000${image}`;
+    return `http://backing-vietnam-bpko.onrender.com${image}`;
   };
 
   const formatDate = (date) => {

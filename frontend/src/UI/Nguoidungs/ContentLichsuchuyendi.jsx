@@ -29,7 +29,7 @@ const ContentLichsuchuyendi = ({ user }) => {
       return;
     }
 
-    fetch(`http://localhost:5000/nhom/lichsu/${userId}`)
+    fetch(`http://backing-vietnam-bpko.onrender.com/nhom/lichsu/${userId}`)
       .then(res => res.json())
       .then(res => {
         console.log("LICH SU:", res);
@@ -50,7 +50,7 @@ const ContentLichsuchuyendi = ({ user }) => {
           window.location.href = "/login";
         }}
         getImageSrc={(img) =>
-          img ? `http://localhost:5000/${img}` : "/img/default.jpg"
+          img ? `http://backing-vietnam-bpko.onrender.com/${img}` : "/img/default.jpg"
         }
       />
 
@@ -94,8 +94,8 @@ const ContentLichsuchuyendi = ({ user }) => {
 
           // Fix URL ảnh (5000 -> 5173 nếu cần)
           const imageUrl = img
-            ? img.includes("localhost:5000")
-              ? img.replace("localhost:5000", "localhost:5173")
+            ? img.includes("backing-vietnam-bpko.onrender.com")
+              ? img.replace("backing-vietnam-bpko.onrender.com", "localhost:5173")
               : img
             : "/img/default.jpg";
 

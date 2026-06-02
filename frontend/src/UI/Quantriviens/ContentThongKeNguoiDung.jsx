@@ -17,7 +17,7 @@ import {
   Clock,
 } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://backing-vietnam-bpko.onrender.com';
 
 const getInitials = (name = '') => {
   return name
@@ -83,7 +83,7 @@ const ContentThongKeNguoiDung = () => {
         setLoading(true);
 
         const res = await fetch(
-          `http://localhost:5000/quantrivien/${slug}/thongkenguoidung`
+          `http://backing-vietnam-bpko.onrender.com/quantrivien/${slug}/thongkenguoidung`
         );
 
         const result = await res.json();
@@ -451,7 +451,7 @@ const UserDetailModal = ({ open, data, onClose }) => {
   const handleSave = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/quantrivien/${data.id}/capnhattaikhoan`,
+        `http://backing-vietnam-bpko.onrender.com/quantrivien/${data.id}/capnhattaikhoan`,
         {
           method: "PUT",
           headers: {

@@ -14,7 +14,7 @@ import axios from "axios";
     },[]);
     const diaDiemNoiBat = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/');
+        const res = await axios.get('http://backing-vietnam-bpko.onrender.com/');
         setData(res.data);
       } catch (error) {
         console.error('loi:', error);

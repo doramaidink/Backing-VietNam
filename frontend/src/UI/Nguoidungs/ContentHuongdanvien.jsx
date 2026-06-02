@@ -15,7 +15,7 @@ const ContentHuongdanvien = ({ user = null }) => {
   useEffect(() => {
     const fetchHuongDanVien = async () => {
       try {
-        const response = await fetch("http://localhost:5000/huongdanvien");
+        const response = await fetch("http://backing-vietnam-bpko.onrender.com/huongdanvien");
         const result = await response.json();
 
         if (!response.ok) {

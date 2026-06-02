@@ -19,10 +19,10 @@ const HeaderTaikhoanKhamPha = ({ user }) => {
     if (!image) return "";
     if (image.startsWith("http")) return image;
     if (image.startsWith("/uploads") || image.startsWith("/img")) {
-      return `http://localhost:5000${image}`;
+      return `http://backing-vietnam-bpko.onrender.com${image}`;
     }
     if (image.startsWith("/")) return image;
-    return `http://localhost:5000/${image}`;
+    return `http://backing-vietnam-bpko.onrender.com/${image}`;
   };
 
   const goTrangChuUser = () => {

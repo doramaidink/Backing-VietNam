@@ -56,7 +56,7 @@ const ContentLoimoinhom = () => {
         }
 
         const res = await fetch(
-          `http://localhost:5000/loimoi?doiTacId=${doiTacId}`
+          `http://backing-vietnam-bpko.onrender.com/loimoi?doiTacId=${doiTacId}`
         );
 
         const text = await res.text();
@@ -79,7 +79,7 @@ const ContentLoimoinhom = () => {
   const handleAccept = async (item) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/loimoi/${item._id}/accept`,
+        `http://backing-vietnam-bpko.onrender.com/loimoi/${item._id}/accept`,
         { method: "POST" }
       );
 
@@ -139,7 +139,7 @@ const ContentLoimoinhom = () => {
   const handleReject = async (item) => {
     try {
       await fetch(
-        `http://localhost:5000/loimoi/${item._id}/reject`,
+        `http://backing-vietnam-bpko.onrender.com/loimoi/${item._id}/reject`,
         {
           method: "DELETE",
         }
@@ -163,7 +163,7 @@ const ContentLoimoinhom = () => {
       const doiTacId = user?.doiTacId || user?.id;
 
       const res = await fetch(
-        `http://localhost:5000/loimoi/thongke?doiTacId=${doiTacId}`
+        `http://backing-vietnam-bpko.onrender.com/loimoi/thongke?doiTacId=${doiTacId}`
       );
 
       const data = await res.json();
@@ -179,7 +179,7 @@ const ContentLoimoinhom = () => {
       const userId = user?.id;
 
       const res = await fetch(
-        `http://localhost:5000/nhom/cuatoi/${userId}`
+        `http://backing-vietnam-bpko.onrender.com/nhom/cuatoi/${userId}`
       );
 
       const data = await res.json();
@@ -195,7 +195,7 @@ const ContentLoimoinhom = () => {
       const doiTacId = user?.doiTacId || user?.id;
 
       const res = await fetch(
-        `http://localhost:5000/loimoi/thongke?doiTacId=${doiTacId}`
+        `http://backing-vietnam-bpko.onrender.com/loimoi/thongke?doiTacId=${doiTacId}`
       );
 
       const data = await res.json();
@@ -285,7 +285,7 @@ const ContentLoimoinhom = () => {
                     <img
                       src={
                         item.doiTacId?.image
-                          ? `http://localhost:5000/${item.doiTacId.image}`
+                          ? `http://backing-vietnam-bpko.onrender.com/${item.doiTacId.image}`
                           : "/img/default.jpg"
                       }
                       alt="avatar"

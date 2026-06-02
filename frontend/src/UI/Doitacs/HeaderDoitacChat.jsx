@@ -43,7 +43,7 @@ const HeaderDoitacChat = ({ user }) => {
                     <img
                         src={
                             user?.image
-                                ? `http://localhost:5000/${user.image}`
+                                ? `http://backing-vietnam-bpko.onrender.com/${user.image}`
                                 : "/img/default.jpg"
                         }
                         className="w-full h-full object-cover"

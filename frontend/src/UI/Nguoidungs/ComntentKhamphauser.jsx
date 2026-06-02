@@ -17,7 +17,7 @@ const ContentKhamphauser = ({ user }) => {
   useEffect(() => {
     const fetchDiaDiems = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/khampha");
+        const res = await axios.get("http://backing-vietnam-bpko.onrender.com/khampha");
         setDiaDiems(res.data.diaDiems || []);
       } catch (error) {
         console.error("Lỗi lấy dữ liệu khám phá:", error);

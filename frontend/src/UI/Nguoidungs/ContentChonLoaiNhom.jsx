@@ -100,8 +100,8 @@ const ContentChonLoaiNhom = () => {
           <div className="trip-info-box">
             <img
               src={
-                selectedPlace?.image?.includes("localhost:5000")
-                  ? selectedPlace.image.replace("localhost:5000", "localhost:5173")
+                selectedPlace?.image?.includes("backing-vietnam-bpko.onrender.com")
+                  ? selectedPlace.image.replace("backing-vietnam-bpko.onrender.com", "localhost:5173")
                   : selectedPlace?.image
               }
               alt={selectedPlace?.tenDiaDiem}

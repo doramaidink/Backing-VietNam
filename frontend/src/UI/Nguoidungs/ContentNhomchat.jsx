@@ -5,7 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import CryptoJS from "crypto-js";
 
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("http://backing-vietnam-bpko.onrender.com");
 const SECRET_KEY = "backpacking_chat_secret";
 
 const ContentNhomchat = ({ user }) => {

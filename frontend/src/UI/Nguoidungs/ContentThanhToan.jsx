@@ -52,7 +52,7 @@ const ContentThanhToan = () => {
         }
 
         const response = await fetch(
-          "http://localhost:5000/payment/create-payment",
+          "http://backing-vietnam-bpko.onrender.com/payment/create-payment",
           {
             method: "POST",
             headers: {
@@ -99,7 +99,7 @@ const ContentThanhToan = () => {
     const interval = setInterval(async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/payment/status/${orderCode}`
+          `http://backing-vietnam-bpko.onrender.com/payment/status/${orderCode}`
         );
 
         const result = await response.json();

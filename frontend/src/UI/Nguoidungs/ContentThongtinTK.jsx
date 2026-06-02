@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 
-const API = "http://localhost:5000";
+const API = "http://backing-vietnam-bpko.onrender.com";
 
 const ContentThongtinTK = ({ user, setUser }) => {
   const [thongTin, setThongTin] = useState(null);

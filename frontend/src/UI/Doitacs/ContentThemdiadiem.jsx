@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { useParams } from "react-router-dom";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://backing-vietnam-bpko.onrender.com";
 
 const ContentThemdiadiem = () => {
   const { slug } = useParams();

@@ -17,7 +17,7 @@ const ContentQuenMatKhau = () => {
 
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/login/quen-mat-khau", {
+      const response = await fetch("http://backing-vietnam-bpko.onrender.com/login/quen-mat-khau", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
