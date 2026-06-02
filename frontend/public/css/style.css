@@ -17029,3 +17029,364 @@ img {
   border-radius: 10px;
   cursor: pointer;
 }
+/* ================================================================
+   RESPONSIVE MOBILE (max-width: 768px)
+   ================================================================ */
+
+@media (max-width: 768px) {
+
+  /* ---- HEADER LOGIN ---- */
+  .header-login {
+    padding: 0 16px;
+    height: 50px;
+  }
+
+  .logo-headerlogin h1 {
+    font-size: 15px;
+  }
+
+  .imglogo-headerlogin {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-home-headerlogin {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  /* ---- HEADER HOME ---- */
+  .header-home {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-header {
+    display: none;
+  }
+
+  .brand-name-header {
+    font-size: 15px;
+  }
+
+  .btn-outline-header,
+  .btn-primary-header {
+    width: auto;
+    height: 36px;
+    font-size: 13px;
+    padding: 0 12px;
+  }
+
+  /* ---- FORM ĐĂNG KÝ ---- */
+  .content-dangki {
+    padding-top: 70px;
+    height: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+
+  .form-dangki {
+    width: calc(100vw - 32px);
+    height: auto;
+    margin-top: 0;
+    padding: 20px 16px;
+  }
+
+  .congroup-contentdangki {
+    width: 100%;
+  }
+
+  .congroup2-contentdangki {
+    width: 100%;
+  }
+
+  .group2-contentdangki {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .dangkyngay-contentdangki,
+  .btn-main-contentdangki {
+    width: 100%;
+  }
+
+  .btn-xem-dieukhoan {
+    margin-left: 0;
+  }
+
+  .otp-container-dangki {
+    width: 100%;
+  }
+
+  /* ---- FORM ĐĂNG NHẬP ---- */
+  .content-dangnhap {
+    padding-top: 70px;
+    height: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+
+  .form-dangnhap {
+    width: calc(100vw - 32px);
+    margin-top: 0;
+  }
+
+  .input-group-dangnhap {
+    width: 100%;
+  }
+
+  /* ---- FORM QUÊN MẬT KHẨU & XÁC NHẬN EMAIL ---- */
+  .content-quenmatkhau {
+    padding-top: 70px;
+    height: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+
+  .form-quenmatkhau,
+  .form-xacnhanemail {
+    width: calc(100vw - 32px);
+    height: auto;
+    margin-top: 0;
+  }
+
+  /* ---- TRANG CHỦ HERO ---- */
+  .tieude-trangchu h1 {
+    font-size: 32px;
+    padding: 0 16px;
+  }
+
+  .timkiem-trangchu {
+    width: calc(100vw - 32px);
+    flex-direction: column;
+    border-radius: 14px;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .timkiem-trangchu input {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .timkiem-trangchu button {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  /* ---- GIỚI THIỆU TRANG CHỦ ---- */
+  .gioithieu-trangchu {
+    padding: 40px 16px;
+  }
+
+  .container-trangchu {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .left-trangchu h1 {
+    font-size: 28px;
+  }
+
+  .grid-trangchu {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .large-trangchu {
+    height: auto;
+    grid-row: span 1;
+  }
+
+  /* ---- ĐIỂM NỔI BẬT TRANG CHỦ ---- */
+  .diemnoibat-trangchu {
+    padding: 40px 16px;
+  }
+
+  .luoi-trangchu {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .header-trangchu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  /* ---- CTA BANNER ---- */
+  .cta-banner-trangchu {
+    flex-direction: column;
+    padding: 24px 16px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cta-right-trangchu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-right-trangchu img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* ---- WHY TRANG CHỦ ---- */
+  .why-trangchu {
+    padding: 40px 16px;
+  }
+
+  .why-grid-trangchu {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- KHÁM PHÁ ---- */
+  .khampha-wrapper {
+    padding: 0 0 24px;
+  }
+
+  .khampha-header h1 {
+    font-size: 24px;
+  }
+
+  .khampha-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .khampha-filters {
+    gap: 6px;
+  }
+
+  /* ---- HƯỚNG DẪN VIÊN ---- */
+  .hdv-page {
+    padding: 24px 0 40px;
+  }
+
+  .hdv-header h1 {
+    font-size: 26px;
+  }
+
+  /* ---- CHECKIN ADMIN ---- */
+  .checkin-stats {
+    flex-direction: column;
+  }
+
+  .checkin-table {
+    overflow-x: auto;
+  }
+
+  .checkin-table table {
+    min-width: 600px;
+  }
+
+  /* ---- NOTIFICATION DROPDOWN ---- */
+  .noti-dropdown {
+    width: calc(100vw - 32px);
+    right: -60px;
+  }
+
+  /* ---- MODAL ĐIỀU KHOẢN ---- */
+  .modal-dieukhoan-overlay {
+    padding: 10px;
+  }
+
+  .modal-dieukhoan-content {
+    max-height: 92vh;
+  }
+
+  .modal-dieukhoan-footer {
+    flex-direction: column;
+  }
+
+  .btn-dong-dieukhoan,
+  .btn-dongy-dieukhoan {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    padding: 40px 16px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* ---- OTP BOX ---- */
+  .otp-box-dangki input {
+    width: 38px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  /* ---- HIRE / GROUP CARD ---- */
+  .hire-card,
+  .group-card {
+    width: 100%;
+  }
+
+  /* ---- LOAD MORE ---- */
+  .load-more-btn {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+/* ================================================================
+   RESPONSIVE SMALL MOBILE (max-width: 480px)
+   ================================================================ */
+
+@media (max-width: 480px) {
+
+  .tieude-trangchu h1 {
+    font-size: 26px;
+  }
+
+  .luoi-trangchu {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-trangchu {
+    grid-template-columns: 1fr;
+  }
+
+  .form-dangki,
+  .form-dangnhap,
+  .form-quenmatkhau,
+  .form-xacnhanemail {
+    border-radius: 0;
+    width: 100vw;
+    padding: 20px 12px;
+  }
+
+  .content-dangki,
+  .content-dangnhap,
+  .content-quenmatkhau {
+    padding-top: 60px;
+  }
+
+  .header-trangchu h2 {
+    font-size: 22px;
+  }
+
+  .khampha-header h1,
+  .hdv-header h1 {
+    font-size: 20px;
+  }
+
+  .otp-box-dangki {
+    gap: 6px;
+  }
+
+  .otp-box-dangki input {
+    width: 32px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
