@@ -22,7 +22,13 @@ const SECRET_KEY = "backpacking_chat_secret";
 // --- MIDDLEWARE ---
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: "https://localhost:5173" }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://backing-viet-nam.vercel.app"
+  ],
+  credentials: true
+}));
 
 // --- CẤU HÌNH STATIC FILES (SỬA LẠI TẠI ĐÂY) ---
 // Đảm bảo rằng đường dẫn này trỏ thẳng đến thư mục chứa các folder 'chư nâm', 'núi bằng am'
